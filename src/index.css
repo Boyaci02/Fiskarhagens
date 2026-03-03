@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Archivo Black", sans-serif;
+  --font-sans: "DM Sans", sans-serif;
+
+  --color-navy-primary: #1B2A4A;
+  --color-orange-accent: #E8611A;
+  --color-bg-light: #F7F8FA;
+  --color-bg-dark: #111D35;
+  --color-text-primary: #0F1A2E;
+  --color-text-secondary: #5A6A85;
+  --color-accent-hover: #FF7A2E;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg-light text-text-primary font-sans antialiased;
+  }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(232, 97, 26, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(232, 97, 26, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(232, 97, 26, 0); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+.circuit-pattern {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
