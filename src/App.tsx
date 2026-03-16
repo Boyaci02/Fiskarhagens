@@ -40,18 +40,12 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-bg-dark/95 backdrop-blur-sm py-3 shadow-lg' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="flex items-center gap-2 group">
-          <div className="relative">
-            <Zap className="w-8 h-8 text-orange-accent fill-orange-accent" />
-            <motion.div 
-              animate={{ opacity: [0.5, 1, 0.5] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="absolute inset-0 blur-md bg-orange-accent/50 -z-10"
-            />
-          </div>
-          <span className="font-display text-xl tracking-tighter text-white">
-            FISKARHAGENS <span className="text-orange-accent">EL</span>
-          </span>
+        <a href="#" className="flex items-center group">
+          <img
+            src="https://assets.cdn.filesafe.space/1FYpgqYgXr6SzFnCzKew/media/69b878849379cf5764c3dc62.png"
+            alt="Fiskarhagens El"
+            className="h-12 w-auto object-contain"
+          />
         </a>
 
         {/* Desktop Nav */}
@@ -594,11 +588,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-6">
-              <Zap className="w-6 h-6 text-orange-accent fill-orange-accent" />
-              <span className="font-display text-lg tracking-tighter text-white">
-                FISKARHAGENS <span className="text-orange-accent">EL</span>
-              </span>
+            <a href="#" className="flex items-center mb-6">
+              <img
+                src="https://assets.cdn.filesafe.space/1FYpgqYgXr6SzFnCzKew/media/69b878849379cf5764c3dc62.png"
+                alt="Fiskarhagens El"
+                className="h-10 w-auto object-contain"
+              />
             </a>
             <p className="text-white/40 max-w-sm leading-relaxed">
               Professionella elinstallationer för både privatpersoner och företag. Med 20 års erfarenhet och ingenjörskompetens garanterar vi högsta kvalitet.
