@@ -57,8 +57,8 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-400 ${
         isScrolled
-          ? 'bg-surface-dark/98 backdrop-blur-md py-4 border-b border-white/[0.07]'
-          : 'bg-transparent py-6'
+          ? 'bg-white py-4 border-b border-line-light shadow-sm'
+          : 'bg-white py-5 border-b border-line-light'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
@@ -76,7 +76,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="nav-link text-[13px] font-medium text-white/70 hover:text-white transition-colors"
+              className="nav-link text-[13px] font-medium text-navy/70 hover:text-navy transition-colors"
             >
               {link.name}
             </a>
@@ -91,7 +91,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden text-white p-1" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button className="md:hidden text-navy p-1" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
@@ -104,7 +104,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 w-full bg-surface-dark border-t border-line-dark md:hidden"
+            className="absolute top-full left-0 w-full bg-white border-t border-line-light md:hidden"
           >
             <div className="flex flex-col p-6 gap-5">
               {navLinks.map((link) => (
@@ -112,7 +112,7 @@ const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-base font-medium text-white/80 hover:text-white transition-colors"
+                  className="text-base font-medium text-navy/80 hover:text-navy transition-colors"
                 >
                   {link.name}
                 </a>
@@ -627,7 +627,7 @@ const Contact = () => {
 // ── Footer ─────────────────────────────────────────────────────────────────
 const Footer = () => {
   return (
-    <footer className="bg-surface-dark py-16 border-t border-line-dark">
+    <footer className="bg-white py-16 border-t border-line-light">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Logo + desc */}
@@ -639,7 +639,7 @@ const Footer = () => {
                 className="h-8 w-auto object-contain"
               />
             </a>
-            <p className="text-sm text-ink-muted max-w-xs leading-relaxed">
+            <p className="text-sm text-ink-mid max-w-xs leading-relaxed">
               Professionella elinstallationer för privatpersoner och företag.
               20 års erfarenhet och ingenjörskompetens — vi garanterar högsta kvalitet.
             </p>
@@ -647,7 +647,7 @@ const Footer = () => {
 
           {/* Quick links */}
           <div>
-            <h4 className="text-[11px] tracking-[0.14em] uppercase font-bold text-ink-muted mb-5">
+            <h4 className="text-[11px] tracking-[0.14em] uppercase font-bold text-navy mb-5">
               Snabblänkar
             </h4>
             <ul className="space-y-3">
@@ -660,7 +660,7 @@ const Footer = () => {
                 <li key={l.name}>
                   <a
                     href={l.href}
-                    className="text-sm text-ink-muted hover:text-orange transition-colors"
+                    className="text-sm text-ink-mid hover:text-orange transition-colors"
                   >
                     {l.name}
                   </a>
@@ -671,7 +671,7 @@ const Footer = () => {
 
           {/* Tjänster */}
           <div>
-            <h4 className="text-[11px] tracking-[0.14em] uppercase font-bold text-ink-muted mb-5">
+            <h4 className="text-[11px] tracking-[0.14em] uppercase font-bold text-navy mb-5">
               Tjänster
             </h4>
             <ul className="space-y-3">
@@ -685,7 +685,7 @@ const Footer = () => {
                 <li key={t}>
                   <a
                     href="#tjanster"
-                    className="text-sm text-ink-muted hover:text-orange transition-colors"
+                    className="text-sm text-ink-mid hover:text-orange transition-colors"
                   >
                     {t}
                   </a>
@@ -696,11 +696,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-line-dark flex flex-col sm:flex-row justify-between items-center gap-4 text-ink-muted text-sm">
+        <div className="pt-8 border-t border-line-light flex flex-col sm:flex-row justify-between items-center gap-4 text-ink-muted text-sm">
           <div>© 2025 Fiskarhagens El AB — Alla rättigheter förbehållna</div>
           <div className="flex gap-6">
             <span>Org.nr: [ORG-NUMMER]</span>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="#" className="hover:text-navy transition-colors">
               Integritetspolicy
             </a>
           </div>
