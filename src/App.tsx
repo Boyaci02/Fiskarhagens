@@ -553,12 +553,12 @@ const Contact = () => {
             <div className="flex items-center gap-4 pt-6 border-t border-line-dark">
               <Instagram className="w-5 h-5 text-ink-muted" />
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/fiskarhagens.el"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-white/60 hover:text-orange transition-colors"
               >
-                @Fiskarhagens El
+                fiskarhagens.el
               </a>
             </div>
           </motion.div>
@@ -699,7 +699,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-line-light flex flex-col sm:flex-row justify-between items-center gap-4 text-ink-muted text-sm">
           <div>© 2025 Fiskarhagens El AB — Alla rättigheter förbehållna</div>
           <div className="flex gap-6">
-            <span>Org.nr: [ORG-NUMMER]</span>
+            <span>Org.nr: 559554-6010</span>
             <a href="#" className="hover:text-navy transition-colors">
               Integritetspolicy
             </a>
